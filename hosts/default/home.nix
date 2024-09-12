@@ -194,22 +194,12 @@ in {
 				};
 				config = {
 					body = ''
-						nvim /etc/nixos/NixOS-config/hosts/default/configuration.nix
-					'';
-				};
-				config-hardware = {
-					body = ''
-						nvim /etc/nixos/NixOS-config/hosts/default/hardware-configuration.nix
-					'';
-				};
-				config-flake = {
-					body = ''
-						nvim /etc/nixos/NixOS-config/flake.nix
-					'';
-				};
-				config-home = {
-					body = ''
 						nvim /etc/nixos/NixOS-config/hosts/default/home.nix
+					'';
+				};
+				condir = {
+					body = ''
+						z /etc/nixos/NixOS-config/
 					'';
 				};
 				/*dev = {
