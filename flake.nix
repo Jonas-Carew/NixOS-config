@@ -11,10 +11,10 @@
 			url = "github:nix-community/nix-index-database";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
-		Neve = {
+		/*Neve = {
 			url = "github:redyf/Neve";
 			inputs.nixpkgs.follows = "nixpkgs";
-		};
+		};*/
 	};
 
 	#outputs = {self, nixpkgs}:
@@ -35,19 +35,21 @@
 			nixos = lib.nixosSystem {
 				inherit system;
 				modules = [
-					./configuration.nix
+					./hosts/default/configuration.nix
+
 					home-manager.nixosModules.home-manager {
 						home-manager.useGlobalPkgs = true;
 						home-manager.useUserPackages = true;
+						home-manager.backupFileExtension = "hm-backup";
 						home-manager.extraSpecialArgs = {
-							inherit Neve;
+							#inherit Neve;
 							username = "jonasc";
 						};
 						home-manager.users.jonasc = {
-							imports = [ ./home.nix ];
+							imports = [ ./hosts/default/home.nix ];
 						};
-						# home-manager.backupFileExtension = "hm-backup";
 					}
+
 					nix-index-database.nixosModules.nix-index
 					{ programs.command-not-found.enable = false; }
 				];

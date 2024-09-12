@@ -38,7 +38,6 @@ in {
 			pkgs.unzip
 			pkgs.tree-sitter
 			pkgs.fsearch
-			Neve.packages.${pkgs.system}.default
 		];
 	};
 
@@ -120,11 +119,13 @@ in {
 				set -g pane-base-index 1
 				set-window-option -g pane-base-index 1
 				set-option -g renumber-windows on
+
+				# prefix highlighting
+				set -g status-left '#{?client_prefix,#[reverse]<Prefix>#[noreverse] ,}[#S] '
 			'';
 			plugins = with pkgs.tmuxPlugins; [
 				sensible
 				resurrect
-				prefix-highlight
 				gruvbox
 			];
 		};
@@ -188,12 +189,27 @@ in {
 				};
 				rebuild = {
 					body = ''
-						sudo nixos-rebuild switch
+						sudo nixos-rebuild switch --flake /etc/nixos/NixOS-config/
 					'';
 				};
 				config = {
 					body = ''
-						sudoedit /etc/nixos/home.nix
+						nvim /etc/nixos/NixOS-config/hosts/default/configuration.nix
+					'';
+				};
+				config-hardware = {
+					body = ''
+						nvim /etc/nixos/NixOS-config/hosts/default/hardware-configuration.nix
+					'';
+				};
+				config-flake = {
+					body = ''
+						nvim /etc/nixos/NixOS-config/flake.nix
+					'';
+				};
+				config-home = {
+					body = ''
+						nvim /etc/nixos/NixOS-config/hosts/default/home.nix
 					'';
 				};
 				/*dev = {
