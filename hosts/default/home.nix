@@ -182,7 +182,7 @@ in {
 				desk = {
 					body = ''
 						c
-						z ~/desktop
+						z ~/Desktop/Desktop
 						fetch
 						ls
 						'';
