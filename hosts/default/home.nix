@@ -1,15 +1,6 @@
-{ inputs, pkgs, lib, username, Neve, ... }:
-let
-	vimFromGitHub = rev: ref: repo: pkgs.vimUtils.buildVimPlugin {
-		pname = "${lib.strings.sanitizeDerivationName repo}";
-		version = ref;
-		src = builtins.fetchGit {
-			url = "https://github.com/${repo}.git";
-			ref = ref;
-			rev = rev;
-		};
-	};
-in {
+{ inputs, pkgs, lib, username, ... }: {
+
+	imports = [ (import ../../modules/neovim) ];
 
 	# Home manager config
 	home = {
