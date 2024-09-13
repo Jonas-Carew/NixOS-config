@@ -45,7 +45,7 @@
 
 		jq = { enable = true; };
 
-		neovim = {
+		/*neovim = {
 			enable = true;
 			defaultEditor = true;
 			extraPackages = with pkgs; [
@@ -77,7 +77,7 @@
 				#adwaita
 				#(vimFromGitHub "453167dc346f39e51141df4fe7b17272f4833c2b" "master" "fneu/breezy")
 			];
-		};
+		};*/
 
 		tmux = {
 			enable = true;

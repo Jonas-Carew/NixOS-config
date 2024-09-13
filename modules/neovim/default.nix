@@ -1,13 +1,25 @@
 { pkgs, ... }: {
 	programs.neovim = {
-		plugins = with pkgs; [
-			vimPlugins.adwaita-nvim
-			vimPlugins.alpha-nvim
-			vimPlugins.vim-gitgutter
-			vimPlugins.telescope-nvim
-			vimPlugins.neo-tree-nvim
-			vimPlugins.vim-surround
-			#vimPlugins.vim-airline test different line
+
+		enable = true;
+		defaultEditor = true;
+		extraPackages = with pkgs; [
+			xclip
 		];
+
+		plugins = with pkgs.vimPlugins; [
+			adwaita-nvim
+			alpha-nvim
+			vim-gitgutter
+			telescope-nvim
+			neo-tree-nvim
+			vim-surround
+			#vim-airline test different line
+		];
+		
+		extraConfig = ''
+			lua << EOF
+			${builtins.readFile ./options.lua}
+		'';
 	};
 }
