@@ -176,7 +176,7 @@ in {
 				};
 				fetch = {
 					body = ''
-						~/diyfetch
+						/etc/nixos/NixOS-config/misc/fetches/diyfetch-vm
 					'';
 				};
 				desk = {
