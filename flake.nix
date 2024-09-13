@@ -32,7 +32,7 @@
 
 	in {
 		nixosConfigurations = {
-			nixos = lib.nixosSystem {
+			vm = lib.nixosSystem {
 				inherit system;
 				modules = [
 					./hosts/default/configuration.nix

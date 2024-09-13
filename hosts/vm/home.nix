@@ -179,12 +179,12 @@
 				};
 				rebuild = {
 					body = ''
-						sudo nixos-rebuild switch --flake /etc/nixos/NixOS-config/
+						sudo nixos-rebuild switch --flake /etc/nixos/NixOS-config#vm
 					'';
 				};
 				config = {
 					body = ''
-						nvim /etc/nixos/NixOS-config/hosts/default/home.nix
+						nvim /etc/nixos/NixOS-config/hosts/vm/home.nix
 					'';
 				};
 				condir = {
