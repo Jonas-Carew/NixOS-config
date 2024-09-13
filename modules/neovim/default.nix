@@ -19,7 +19,7 @@
 		
 		extraConfig = ''
 			lua << EOF
-			${builtins.readFile ./options.lua}
+			${builtins.readFile ./config/options.lua}
 		'';
 	};
 }
