@@ -27,7 +27,6 @@
 			pkgs.soft-serve
 			pkgs.glow
 			pkgs.unzip
-			pkgs.tree-sitter
 			pkgs.fsearch
 		];
 	};
@@ -53,7 +52,7 @@
 				xclip
 			];
 			extraLuaConfig = ''
-				vim.cmd("colorscheme default")
+				vim.cmd("colorscheme adwaita")
 				vim.cmd("command Tab2 %s/  /\t/g")
 				local o = vim.opt
 				o.number = true
