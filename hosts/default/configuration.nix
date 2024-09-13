@@ -91,6 +91,10 @@
 		neovim
 	];
 
+	programs.bash.shellAliases = {
+		x = "exit";
+	};
+
 	# Some programs need SUID wrappers, can be configured further or are
 	# started in user sessions.
 	# programs.mtr.enable = true;
