@@ -45,6 +45,10 @@
 		variant = "";
 	};
 
+	fonts.packages = with pkgs; [
+		(nerdfonts.override { fonts = [ "FiraCode" ]; })
+	];
+
 	# Enable CUPS to print documents.
 	services.printing.enable = true;
 
@@ -74,7 +78,7 @@
 		extraGroups = [ "networkmanager" "wheel" ];
 		packages = with pkgs; [
 			kdePackages.kate
-		# thunderbird
+			# thunderbird
 		];
 	};
 
@@ -84,9 +88,7 @@
 	# List packages installed in system profile. To search, run:
 	# $ nix search wget
 	environment.systemPackages = with pkgs; [
-	# vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-	# wget
-	neovim
+		neovim
 	];
 
 	# Some programs need SUID wrappers, can be configured further or are
