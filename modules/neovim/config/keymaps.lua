@@ -18,6 +18,10 @@ keymap("n", "<C-l>", "<C-w>l", opts)
 -- Open Neotree
 keymap("n", "<leader>e", ":Neotree toggle<cr>", opts)
 
+-- Telescope commands
+keymap("n", "<leader>c", ":Telescope git_commits<cr>", opts)
+keymap("n", "<leader>g", ":Telescope live_grep<cr>", opts)
+
 -- Quick normal (change to using capslock)
 keymap("i", "jk", "<ESC>", opts)
 

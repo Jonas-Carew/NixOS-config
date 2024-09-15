@@ -19,15 +19,16 @@
 			la = "eza -a --icons";
 		};
 		
-		packages = [
-			pkgs.xclip
-			pkgs.gum
-			pkgs.neo-cowsay
-			pkgs.fortune-kind
-			pkgs.soft-serve
-			pkgs.glow
-			pkgs.unzip
-			pkgs.fsearch
+		packages = with pkgs; [
+			xclip
+			gum
+			neo-cowsay
+			fortune-kind
+			soft-serve
+			glow
+			unzip
+			fsearch
+			ripgrep
 		];
 	};
 
