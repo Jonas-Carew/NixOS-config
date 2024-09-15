@@ -20,6 +20,7 @@
 		extraConfig = ''
 			lua << EOF
 			${builtins.readFile ./config/options.lua}
+			${builtins.readFile ./config/keymaps.lua}
 		'';
 	};
 }
