@@ -10,13 +10,13 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -- Better window navigation
-keymap("n" "<C-h>", "<C-w>h", opts)
-keymap("n" "<C-j>", "<C-w>j", opts)
-keymap("n" "<C-k>", "<C-w>k", opts)
-keymap("n" "<C-l>", "<C-w>l", opts)
+keymap("n", "<C-h>", "<C-w>h", opts)
+keymap("n", "<C-j>", "<C-w>j", opts)
+keymap("n", "<C-k>", "<C-w>k", opts)
+keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- Open Neotree
-keymap("n" "<leader>e", ":Neotree toggle")
+keymap("n", "<leader>e", ":Neotree toggle")
 
 -- Quick normal (change to using capslock)
 keymap("i", "jk", "<ESC>", opts)
