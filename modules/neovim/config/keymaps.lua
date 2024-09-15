@@ -16,7 +16,7 @@ keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- Open Neotree
-keymap("n", "<leader>e", ":Neotree toggle")
+keymap("n", "<leader>e", ":Neotree toggle<cr>", opts)
 
 -- Quick normal (change to using capslock)
 keymap("i", "jk", "<ESC>", opts)
