@@ -21,7 +21,7 @@
 		];
 		
 		extraConfig = ''
-			:luafile ~/config/init.lua
+			:luafile /etc/nixos/NixOS-config/modules/neovim/config/init.lua
 		'';
 	};
 }
