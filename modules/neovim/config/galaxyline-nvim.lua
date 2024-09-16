@@ -1,7 +1,3 @@
--- This file configures galaxyline, a fast and small statusline for nvim.
--- The configuration was taken from github.com/siduck76/neovim-dotfiles/
--- All I did was change the colors. Full credit goes to siduck76
-
 local gl = require("galaxyline")
 local gls = gl.section
 local condition = require("galaxyline.condition")
