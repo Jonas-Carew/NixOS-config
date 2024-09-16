@@ -44,8 +44,6 @@ gls.left[1] = {
 			}
 			return alias[vim.fn.mode()]
 		end,
---		separator = { " ", " " },
---		separator_highlight = { colors.adw13, colors.adw13 },
 		highlight = { colors.adw2, colors.adw13, 'bold' },
 	},
 }
