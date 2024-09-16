@@ -1,4 +1,3 @@
-
 local o = vim.opt
 
 vim.cmd("colorscheme adwaita")

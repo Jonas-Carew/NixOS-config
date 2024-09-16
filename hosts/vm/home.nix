@@ -1,6 +1,8 @@
 { inputs, pkgs, lib, username, ... }: {
 
-	imports = [ (import ../../modules/neovim) ];
+	imports = [
+		(import ../../modules/neovim)
+	];
 
 	# Home manager config
 	home = {
@@ -20,7 +22,6 @@
 		};
 		
 		packages = with pkgs; [
-			xclip
 			gum
 			neo-cowsay
 			fortune-kind
@@ -45,40 +46,6 @@
 		fzf = { enable = true; };
 
 		jq = { enable = true; };
-
-		/*neovim = {
-			enable = true;
-			defaultEditor = true;
-			extraPackages = with pkgs; [
-				xclip
-			];
-			extraLuaConfig = ''
-				vim.cmd("colorscheme adwaita")
-				vim.cmd("command Tab2 %s/  /\t/g")
-				local o = vim.opt
-				o.number = true
-				o.relativenumber = true
-				o.mouse = 'a'
-				o.tabstop = 4
-				o.shiftwidth = 4
-				o.smartindent = true
-				o.clipboard = 'unnamedplus'
-				o.undofile = true
-				o.list = true
-				o.colorcolumn = "81"
-				vim.opt.listchars = {
-					tab = '  ',
-					multispace = '··',
-					extends = '⟩',
-					precedes = '⟨',
-					trail = '·'
-				}
-			'';
-			plugins = with pkgs.vimPlugins; [
-				#adwaita
-				#(vimFromGitHub "453167dc346f39e51141df4fe7b17272f4833c2b" "master" "fneu/breezy")
-			];
-		};*/
 
 		tmux = {
 			enable = true;

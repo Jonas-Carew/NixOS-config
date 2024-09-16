@@ -5,22 +5,23 @@
 		defaultEditor = true;
 		extraPackages = with pkgs; [
 			xclip
+			tree-sitter
+			ripgrep
 		];
 
 		plugins = with pkgs.vimPlugins; [
-			adwaita-nvim
-			alpha-nvim
-			vim-gitgutter
-			telescope-nvim
-			neo-tree-nvim
-			vim-surround
-			#vim-airline test different line
+			adwaita-nvim					# colorscheme
+			alpha-nvim						# greeter
+			vim-gitgutter					# live git status
+			telescope-nvim					# fuzzy finder
+			neo-tree-nvim					# file tree
+			vim-surround					# surround selections with pairs
+			nvim-treesitter.withAllGrammars	# treesitter
+			galaxyline-nvim					# status line
 		];
 		
 		extraConfig = ''
-			lua << EOF
-			${builtins.readFile ./config/options.lua}
-			${builtins.readFile ./config/keymaps.lua}
+			:luafile ~/config/init.lua
 		'';
 	};
 }
