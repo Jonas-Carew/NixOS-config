@@ -21,15 +21,10 @@
 		];
 		
 		extraConfig = ''
-			:luafile /etc/nixos/NixOS-config/modules/neovim/config/init.lua
+			lua << EOF
+			${builtins.readFile ./config/options.lua}
+			${builtins.readFile ./config/keymaps.lua}
+			${builtins.readFile ./config/galaxyline-nvim.lua}
 		'';
-	};
-
-	xdg = {
-		enable = true;
-		configFile.nvim = {
-			source = ./config;
-			recursive = true;
-		};
 	};
 }
