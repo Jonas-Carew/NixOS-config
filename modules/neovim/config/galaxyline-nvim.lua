@@ -6,7 +6,7 @@ local gl = require("galaxyline")
 local gls = gl.section
 local condition = require("galaxyline.condition")
 
-gl.short_line_list = { "NvimTree", "minimap" }
+-- gl.short_line_list = { "NvimTree", "minimap" }
 
 vim.api.nvim_command("hi GalaxyLineFillSection guibg=NONE")
 
@@ -35,22 +35,31 @@ local colors = {
 }
 
 gls.left[1] = {
-	leftStart = {
+	ViMode = {
 		provider = function()
-			return ""
+			local alias = {
+				n = "NORMAL",
+				i = "INSERT",
+				c = "COMMAND",
+				V = "VISUAL",
+				[""] = "VISUAL",
+				v = "VISUAL",
+				R = "REPLACE",
+			}
+			return alias[vim.fn.mode()]
 		end,
-		highlight = { colors.adw5, colors.adw0 },
+--		separator = { " ", " " },
+--		separator_highlight = { colors.adw13, colors.adw13 },
+		highlight = { colors.adw2, colors.adw13, 'bold' },
 	},
 }
 
 gls.left[2] = {
-	statusIcon = {
+	leftMid = {
 		provider = function()
-			return "  "
+			return " "
 		end,
-		highlight = { colors.adw3, colors.adw5 },
-		separator = " ",
-		separator_highlight = { colors.adw2, colors.adw3 },
+		highlight = { colors.adw13, colors.adw2 },
 	},
 }
 
@@ -58,7 +67,7 @@ gls.left[3] = {
 	FileIcon = {
 		provider = "FileIcon",
 		condition = condition.buffer_not_empty,
-		highlight = { require("galaxyline.providers.fileinfo").get_file_icon_color, colors.adw3 },
+		highlight = { require("galaxyline.providers.fileinfo").get_file_icon_color, colors.adw2 },
 	},
 }
 
@@ -66,92 +75,83 @@ gls.left[4] = {
 	FileName = {
 		provider = { "FileName", "FileSize" },
 		condition = condition.buffer_not_empty,
-		highlight = { colors.adw6, colors.adw3 },
+		highlight = { colors.adw13, colors.adw2 },
 	},
 }
 
 gls.left[5] = {
 	leftEnd = {
 		provider = function()
-			return ""
+			return ""
 		end,
 		separator = " ",
-		highlight = { colors.adw3, colors.adw0 },
+		highlight = { colors.adw2, colors.adw0 },
 	},
 }
 
 gls.mid[1] = {
 	midStart = {
 		provider = function()
-			return ""
+			return ""
 		end,
-		highlight = { colors.adw3, colors.adw0 },
+		highlight = { colors.adw2, colors.adw0 },
 	},
 }
 
 gls.mid[2] = {
-	lspIcon = {
-		provider = function()
-			return ""
-		end,
-		highlight = { colors.adw15, colors.adw3 },
+	GetLspClient = {
+		provider = "GetLspClient",
+		separator = { " ", " " },
+		separator_highlight = { colors.adw2, colors.adw2 },
+		highlight = { colors.adw14, colors.adw2 },
 	},
 }
 
 gls.mid[3] = {
-	GetLspClient = {
-		provider = "GetLspClient",
-		separator = { " ", " " },
-		separator_highlight = { colors.adw3, colors.adw3 },
-		highlight = { colors.adw15, colors.adw3 },
+	DiagnosticError = {
+		provider = "DiagnosticError",
+		icon = " ",
+		highlight = { colors.adw11, colors.adw2 },
 	},
 }
 
 gls.mid[4] = {
-	DiagnosticError = {
-		provider = "DiagnosticError",
-		icon = " ",
-		highlight = { colors.adw11, colors.adw3 },
+	DiagnosticWarn = {
+		provider = "DiagnosticWarn",
+		icon = " ",
+		highlight = { colors.adw12, colors.adw2 },
 	},
 }
 
 gls.mid[5] = {
-	DiagnosticWarn = {
-		provider = "DiagnosticWarn",
-		icon = " ",
-		highlight = { colors.adw12, colors.adw3 },
+	DiagnosticInfo = {
+		provider = "DiagnosticInfo",
+		icon = " ",
+		highlight = { colors.adw6, colors.adw2 },
+	},
+}
+
+gls.mid[6] = {
+	DiagnosticHint = {
+		provider = "DiagnosticHint",
+		icon = " ",
+		highlight = { colors.adw8, colors.adw2 },
 	},
 }
 
 gls.mid[7] = {
-	DiagnosticInfo = {
-		provider = "DiagnosticInfo",
-		icon = "\u{f05a} ",
-		highlight = { colors.adw11, colors.adw3 },
-	},
-}
-
-gls.mid[8] = {
-	DiagnosticHint = {
-		provider = "DiagnosticHint",
-		icon = " ",
-		highlight = { colors.adw10, colors.adw3 },
-	},
-}
-
-gls.mid[9] = {
 	midEnd = {
 		provider = function()
-			return ""
+			return ""
 		end,
-		highlight = { colors.adw3, colors.adw0 },
+		highlight = { colors.adw2, colors.adw0 },
 	},
 }
 
 gls.right[1] = {
 	GitIcon = {
 		provider = function()
-			return ""
+			return ""
 		end,
 		condition = require("galaxyline.providers.vcs").check_git_workspace,
 		highlight = { colors.adw10, colors.adw0 },
@@ -182,7 +182,7 @@ gls.right[4] = {
 	DiffAdd = {
 		provider = "DiffAdd",
 		condition = condition.hide_in_width,
-		icon = " ",
+		icon = " ",
 		highlight = { colors.adw14, colors.adw0 },
 	},
 }
@@ -208,46 +208,34 @@ gls.right[6] = {
 gls.right[7] = {
 	rightStart = {
 		provider = function()
-			return ""
+			return " "
 		end,
-		separator = " ",
-		separator_highlight = { colors.adw0, colors.adw0 },
 		highlight = { colors.adw8, colors.adw0 },
 	},
 }
 
 gls.right[8] = {
-	ViMode = {
+	rightEnd = {
 		provider = function()
-			local alias = {
-				n = "NORMAL",
-				i = "INSERT",
-				c = "COMMAND",
-				V = "VISUAL",
-				[""] = "VISUAL",
-				v = "VISUAL",
-				R = "REPLACE",
-			}
-			return alias[vim.fn.mode()]
+			return "  "
 		end,
-		highlight = { colors.adw3, colors.adw8 },
+		highlight = { colors.adw8, colors.adw8 },
 	},
 }
 
 gls.right[9] = {
 	PerCent = {
 		provider = "LinePercent",
-		separator = " ",
-		separator_highlight = { colors.adw3, colors.adw8 },
-		highlight = { colors.adw3, colors.adw5 },
+		highlight = { colors.adw2, colors.adw8 },
 	},
 }
-
-gls.right[10] = {
+--[[
+gls.right[9] = {
 	rightEnd = {
 		provider = function()
-			return ""
+			return ""
 		end,
-		highlight = { colors.adw5, colors.adw0 },
+		highlight = { colors.adw8, colors.adw0 },
 	},
 }
+--]]
