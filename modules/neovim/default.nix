@@ -24,4 +24,12 @@
 			:luafile /etc/nixos/NixOS-config/modules/neovim/config/init.lua
 		'';
 	};
+
+	xdg = {
+		enable = true;
+		configFile.nvim = {
+			source = ./config;
+			recursive = true;
+		};
+	};
 }

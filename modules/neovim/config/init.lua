@@ -1,3 +1,3 @@
-require("options.lua")
-require("keymaps.lua")
-require("galaxyline-config.lua")
+require("options")
+require("keymaps")
+require("galaxyline-config")
