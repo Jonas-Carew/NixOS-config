@@ -14,6 +14,9 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
+-- Remove highlights
+keymap("n", "<leader>n", ":nohl<cr>", opts)
+
 -- Open Neotree
 keymap("n", "<leader>e", ":Neotree toggle<cr>", opts)
 
