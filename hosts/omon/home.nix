@@ -140,7 +140,7 @@
 				};
 				fetch = {
 					body = ''
-						/etc/nixos/NixOS-config/misc/fetches/diyfetch-vm
+						/etc/nixos/NixOS-config/misc/fetches/diyfetch-omon
 					'';
 				};
 				desk = {
@@ -223,5 +223,10 @@
 			};
 		};
 
+		wezterm = {
+			enable = true;
+			extraConfig = ''
+			'';
+		};
 	};
 }
