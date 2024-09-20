@@ -166,6 +166,11 @@
 						z /etc/nixos/NixOS-config/
 					'';
 				};
+				homdir = {
+					body = ''
+						z /etc/nixos/NixOS-config/hosts/omon
+					'';
+				};
 				/*dev = {
 					body = ''
 						switch $argv[1]
