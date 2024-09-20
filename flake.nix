@@ -48,6 +48,27 @@
 					{ programs.command-not-found.enable = false; }
 				];
 			};
+			omon = lib.nixosSystem {
+				inherit system;
+				modules = [
+					./hosts/omon/configuration.nix
+
+					home-manager.nixosModules.home-manager {
+						home-manager.useGlobalPkgs = true;
+						home-manager.useUserPackages = true;
+						home-manager.backupFileExtension = "hm-backup";
+						home-manager.extraSpecialArgs = {
+							username = "jonasc";
+						};
+						home-manager.users.jonasc = {
+							imports = [ ./hosts/omon/home.nix ];
+						};
+					}
+
+					nix-index-database.nixosModules.nix-index
+					{ programs.command-not-found.enable = false; }
+				];
+			};
 		};
 	};
 }
