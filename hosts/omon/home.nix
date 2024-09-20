@@ -91,7 +91,7 @@
 		git = {
 			enable = true;
 			userName = "jonasc";
-			userEmail = "jonasc@nixos";
+			userEmail = "jonasc@omonporch@nixos";
 			extraConfig = {
 				init.defaultBranch = "main";
 			};
