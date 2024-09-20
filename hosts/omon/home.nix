@@ -20,7 +20,7 @@
 			ls = "eza --icons";
 			la = "eza -a --icons";
 		};
-		
+
 		packages = with pkgs; [
 			gum
 			neo-cowsay
@@ -30,8 +30,12 @@
 			unzip
 			fsearch
 			ripgrep
+			fira-code
+			nerdfonts
 		];
 	};
+
+	fonts.fontconfig.enable = true;
 
 	# all built-in to home manager programs
 	# also has their configs
