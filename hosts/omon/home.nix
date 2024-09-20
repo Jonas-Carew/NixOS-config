@@ -32,6 +32,8 @@
 			ripgrep
 			fira-code
 			nerdfonts
+			flameshot
+			discord
 		];
 	};
 
