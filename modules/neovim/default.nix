@@ -18,8 +18,6 @@
 			vim-surround					# surround selections with pairs
 			nvim-treesitter.withAllGrammars	# treesitter
 			galaxyline-nvim					# status line
-
-			nvim-lspconfig					# lsp config
 		];
 		
 		extraConfig = ''
