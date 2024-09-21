@@ -120,6 +120,11 @@
 						z /etc/nixos/NixOS-config/
 					'';
 				};
+				touchpad-settings = {
+					body = ''
+						kcmshell6 kcm_touchpad
+					'';
+				};
 			};
 		};	
 
