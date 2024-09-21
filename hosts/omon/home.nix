@@ -21,6 +21,9 @@
 
 		# pkgs for cs290 - web dev
 		(import ../../modules/cs290)
+
+		# wezterm with config
+		(import ../../modules/wezterm)
 	];
 
 	# Home manager config
@@ -127,11 +130,5 @@
 				};
 			};
 		};	
-
-		wezterm = {
-			enable = true;
-			extraConfig = ''
-			'';
-		};
 	};
 }
