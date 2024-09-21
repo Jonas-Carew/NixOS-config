@@ -2,6 +2,7 @@
 
 	imports = [
 		(import ../../modules/neovim)
+		(import ../../modules/tmux)
 	];
 
 	# Home manager config
@@ -55,7 +56,7 @@
 
 		jq = { enable = true; };
 
-		tmux = {
+		/*tmux = {
 			enable = true;
 			extraConfig = ''
 				# set command bind to Ctrl-a instead of Ctrl-b
@@ -94,7 +95,7 @@
 				resurrect
 				gruvbox
 			];
-		};
+		};*/
 
 		git = {
 			enable = true;
