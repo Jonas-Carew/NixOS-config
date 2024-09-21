@@ -34,6 +34,7 @@
 			nerdfonts
 			flameshot
 			discord
+			vscodium
 		];
 	};
 
