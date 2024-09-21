@@ -1,3 +1,5 @@
+# home.nix
+
 { inputs, pkgs, lib, username, ... }: {
 
 	imports = [
