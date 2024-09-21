@@ -12,6 +12,9 @@
 
 		# use cowsay and fortune for a 'say' command
 		(import ../../modules/say-fortune)
+
+		# git with fish functions
+		(import ../../modules/git)
 	];
 
 	# Home manager config
@@ -61,15 +64,6 @@
 
 		#jq = { enable = true; };
 
-		git = {
-			enable = true;
-			userName = "jonasc";
-			userEmail = "jonasc@omonporch@nixos";
-			extraConfig = {
-				init.defaultBranch = "main";
-			};
-		};
-
 		fish = {
 			enable = true;
 			functions = {
@@ -92,17 +86,6 @@
 					body = ''
 						c
 						ls
-					'';
-				};
-				ga = {
-					body = ''
-						git add --all
-						git commit -m $argv[1]
-					'';
-				};
-				gp = {
-					body = ''
-						git push
 					'';
 				};
 				fetch = {
