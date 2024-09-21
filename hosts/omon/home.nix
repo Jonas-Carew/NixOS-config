@@ -18,6 +18,9 @@
 
 		# git with fish functions
 		(import ../../modules/git)
+
+		# pkgs for cs290 - web dev
+		(import ../../modules/cs290)
 	];
 
 	# Home manager config
