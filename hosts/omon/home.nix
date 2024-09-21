@@ -25,7 +25,7 @@
 		(import ../../modules/cs290)
 
 		# wezterm with config
-		(import ../../modules/wezterm)
+		# (import ../../modules/wezterm)
 	];
 
 	# Home manager config
