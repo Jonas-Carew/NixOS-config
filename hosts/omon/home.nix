@@ -9,6 +9,9 @@
 
 		# use FiraCode nerdfont w/ symbols
 		(import ../../modules/firacode)
+
+		# use cowsay and fortune for a 'say' command
+		(import ../../modules/say-fortune)
 	];
 
 	# Home manager config
@@ -30,15 +33,11 @@
 
 		packages = with pkgs; [
 			gum
-			neo-cowsay
-			fortune-kind
 			soft-serve
 			glow
 			unzip
 			fsearch
 			ripgrep
-			fira-code
-			nerdfonts
 			flameshot
 			discord
 			vscodium
@@ -137,23 +136,6 @@
 				homdir = {
 					body = ''
 						z /etc/nixos/NixOS-config/hosts/omon
-					'';
-				};
-				/*dev = {
-					body = ''
-						switch $argv[1]
-							case 'vhs'
-								nix develop ~/flakes/vhs
-							case 'zig'
-								nix develop ~/flakes/zig
-							case '*'
-								echo unknown environment
-						end
-					'';
-				};*/
-				say = {
-					body = ''
-						fortune-kind | cowsay --random
 					'';
 				};
 			};
