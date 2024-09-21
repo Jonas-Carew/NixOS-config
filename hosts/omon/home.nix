@@ -43,8 +43,6 @@
 			ripgrep
 			flameshot
 			discord
-			vscodium
-			nodejs_20
 		];
 	};
 
