@@ -18,6 +18,8 @@
 			vim-surround					# surround selections with pairs
 			nvim-treesitter.withAllGrammars	# treesitter
 			galaxyline-nvim					# status line
+
+			nvim-lspconfig					# lsp config
 		];
 		
 		extraConfig = ''
@@ -25,6 +27,7 @@
 			${builtins.readFile ./config/options.lua}
 			${builtins.readFile ./config/keymaps.lua}
 			${builtins.readFile ./config/galaxyline-nvim.lua}
+			${builtins.readFile ./config/treesitter.lua}
 		'';
 	};
 }
