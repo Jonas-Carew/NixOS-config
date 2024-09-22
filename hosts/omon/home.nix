@@ -22,6 +22,9 @@
 		(import ../../modules/git)
 
 		# pkgs for cs290 - web dev
+		(import ../../modules/osu)
+
+		# pkgs for cs290 - web dev
 		(import ../../modules/cs290)
 
 		# wezterm with config
@@ -54,8 +57,36 @@
 			ripgrep
 			flameshot
 			discord
+			/*
+			swaylock
+			swayidle
+			wl-clipboard
+			mako
+			alacritty
+			wofi
+			waybar
+			*/
 		];
 	};
+
+	/*wayland.windowManager.sway = {
+		enable = true;
+		wrapperFeatures.gtk = true;
+		config = {
+			startup = [{
+				command = "dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK";
+			}];
+			terminal = "alacritty";
+			menu = "wofi --show run";
+			bars = [{
+				fonts.size = 15.0;
+				position = "bottom";
+			}];
+			output.eDP-1 = {
+				scale = "1";
+			};
+		};
+	};*/
 
 	fonts.fontconfig.enable = true;
 
