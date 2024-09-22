@@ -3,7 +3,7 @@
 		fish.functions = {
 			osu = {
 				body = ''
-					ssh caewj@flip1.engr.oregonstate.edu
+					ssh carewj@flip1.engr.oregonstate.edu
 				'';
 			};
 		};
