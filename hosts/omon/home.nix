@@ -58,6 +58,7 @@
 			flameshot
 			discord
 			krita
+			onlyoffice-bin_latest
 			/*
 			swaylock
 			swayidle
