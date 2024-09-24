@@ -57,6 +57,7 @@
 			ripgrep
 			flameshot
 			discord
+			krita
 			/*
 			swaylock
 			swayidle
