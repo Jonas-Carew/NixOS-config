@@ -10,6 +10,11 @@
 					z ~/Desktop/Desktop/School-Work/F2/CS290
 				'';
 			};
+			osuweb = {
+				body = ''
+					scp $argv carewj@flip1.engr.oregonstate.edu:~/public_html
+				'';
+			};
 		};
 	};
 }
