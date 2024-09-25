@@ -55,7 +55,6 @@
 	services.displayManager.sddm.enable = true;
 	services.desktopManager.plasma6.enable = true;
 
-	# Network Manager
 	/*
 	# Sway
 	programs.sway = {
@@ -136,6 +135,12 @@
 
 	# Enable the OpenSSH daemon.
 	services.openssh.enable = true;
+
+	# Bluetooth
+	hardware.bluetooth = {
+		enable = true;
+		powerOnBoot = true;
+	};
 
 	# Open ports in the firewall.
 	# networking.firewall.allowedTCPPorts = [ ... ];
