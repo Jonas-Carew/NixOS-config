@@ -2,8 +2,8 @@
 	programs = {
 		git = {
 			enable = true;
-			userName = "jonasc";
-			userEmail = "jonasc@omonporch@nixos";
+			userName = "jonasc@nixos";
+			userEmail = "carewj@oregonstate.edu";
 			extraConfig = {
 				init.defaultBranch = "main";
 			};
