@@ -59,6 +59,7 @@
 			discord
 			krita
 			onlyoffice-bin_latest
+			circumflex
 			/*
 			swaylock
 			swayidle
