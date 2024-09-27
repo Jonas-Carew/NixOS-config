@@ -24,12 +24,6 @@
 		# pkgs for accessing osu servers
 		(import ../../modules/osu)
 
-		# pkgs for cs290 - web dev
-		(import ../../modules/cs290)
-
-		# pkgs for development in C
-		(import ../../modules/dev/C)
-
 		# wezterm with config
 		# (import ../../modules/wezterm)
 	];

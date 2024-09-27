@@ -1,4 +1,10 @@
 { pkgs, ... }: {
+
+	imports = [
+		(import ./cs290)
+		(import ./cs261)
+	];
+
 	programs = {
 		fish.functions = {
 			osu = {
