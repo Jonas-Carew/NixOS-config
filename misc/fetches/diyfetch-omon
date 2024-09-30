@@ -12,7 +12,8 @@ info=$(gum style "[38;5;${main_color}m [0;1;38;5;${main_color}m${USER}[0m@
 [0;32m   │  └─ [38;5;${main_color}m [0m $(uptime | sed -E 's/^[^,]*up *//; s/, *[[:digit:]]* user.*//; s/min/minutes/; s/([[:digit:]]+):0?([[:digit:]]+)/\1 hours, \2 minutes/')
 [0;32m   ├─ [38;5;${main_color}m [0m Nixpkgs
 [0;32m   ├─ [38;5;${main_color}m [0m $(basename "${SHELL}")
-[0;32m   ├─ [38;5;${main_color}m [0m neovim
+[0;32m   ├─ [38;5;${main_color}m [0m $(basename "${EDITOR}")
+[0;32m   │  └─ [38;5;${main_color}m [0m Adwaita
 [0;32m   └─ [38;5;${main_color}m󱌣 [0m eza & zoxide")
 
 art=$(gum style '       [32m&&[0m
