@@ -2,7 +2,6 @@
 
 	imports = [
 		(import ./cs290)
-		(import ./cs261)
 	];
 
 	programs = {
