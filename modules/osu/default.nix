@@ -17,6 +17,11 @@
 					scp $argv carewj@flip1.engr.oregonstate.edu:~/transfer
 				'';
 			};
+			osuweb = {
+				body = ''
+					scp $argv carewj@flip1.engr.oregonstate.edu:~/public_html
+				'';
+			};
 		};
 	};
 }
