@@ -56,7 +56,6 @@
 			discord
 			krita
 			onlyoffice-bin_latest
-			thefuck
 			/*
 			swaylock
 			swayidle
