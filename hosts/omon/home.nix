@@ -56,6 +56,7 @@
 			discord
 			krita
 			onlyoffice-bin_latest
+			cloc
 			/*
 			swaylock
 			swayidle
