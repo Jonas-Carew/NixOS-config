@@ -24,6 +24,9 @@
 		# pkgs for accessing osu servers
 		(import ../../modules/osu)
 
+		# dev package for C
+		(import ../../modules/dev/C)
+
 		# wezterm with config
 		# (import ../../modules/wezterm)
 	];
