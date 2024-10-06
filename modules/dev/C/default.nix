@@ -3,5 +3,6 @@
 		gcc11
 		gnumake
 		valgrind
+		gdb
 	];
 }
