@@ -14,6 +14,9 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
+-- Easier recording playing
+keymap("n", "<leader>q", "@", opts)
+
 -- Remove highlights
 keymap("n", "<leader>n", ":nohl<cr>", opts)
 
