@@ -107,7 +107,7 @@
 				desk = {
 					body = ''
 						c
-						z ~/Desktop/Desktop
+						z ~
 						fetch
 						ls
 						'';
