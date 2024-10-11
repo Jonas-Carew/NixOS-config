@@ -3,6 +3,7 @@
 { inputs, pkgs, lib, username, ... }: {
 
 	imports = [
+/*
 		# neovim with config
 		(import ../../modules/neovim)
 
@@ -29,6 +30,7 @@
 
 		# wezterm with config
 		# (import ../../modules/wezterm)
+*/
 	];
 
 	# Home manager config
@@ -55,41 +57,9 @@
 			unzip
 			fsearch
 			ripgrep
-			flameshot
-			discord
-			krita
-			onlyoffice-bin_latest
 			cloc
-			/*
-			swaylock
-			swayidle
-			wl-clipboard
-			mako
-			alacritty
-			wofi
-			waybar
-			*/
 		];
 	};
-
-	/*wayland.windowManager.sway = {
-		enable = true;
-		wrapperFeatures.gtk = true;
-		config = {
-			startup = [{
-				command = "dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK";
-			}];
-			terminal = "alacritty";
-			menu = "wofi --show run";
-			bars = [{
-				fonts.size = 15.0;
-				position = "bottom";
-			}];
-			output.eDP-1 = {
-				scale = "1";
-			};
-		};
-	};*/
 
 	fonts.fontconfig.enable = true;
 
@@ -133,7 +103,7 @@
 				};
 				fetch = {
 					body = ''
-						/etc/nixos/NixOS-config/misc/fetches/diyfetch-omon
+						/etc/nixos/NixOS-config/misc/fetches/diyfetch-wsl
 					'';
 				};
 				desk = {
@@ -146,22 +116,17 @@
 				};
 				rebuild = {
 					body = ''
-						sudo nixos-rebuild switch --flake /etc/nixos/NixOS-config#omon
+						sudo nixos-rebuild switch --flake /etc/nixos/NixOS-config#wsl
 					'';
 				};
 				config = {
 					body = ''
-						nvim /etc/nixos/NixOS-config/hosts/omon/home.nix
+						nvim /etc/nixos/NixOS-config/hosts/wsl/home.nix
 					'';
 				};
 				condir = {
 					body = ''
 						z /etc/nixos/NixOS-config/
-					'';
-				};
-				touchpad-settings = {
-					body = ''
-						kcmshell6 kcm_touchpad
 					'';
 				};
 			};

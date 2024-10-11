@@ -11,7 +11,7 @@
 		stateVersion = "24.05";
 
 		username = "${username}";
-		homeDirectory = "/home/jonasc";
+		homeDirectory = "/home/${username}";
 
 		# Personal editor & shell
 		sessionVariables.EDITOR = "nvim";

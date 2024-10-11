@@ -71,6 +71,27 @@
 					{ programs.command-not-found.enable = false; }
 				];
 			};
+			wsl = lib.nixosSystem {
+				inherit system;
+				modules = [
+					./hosts/wsl/configuration.nix
+
+					home-manager.nixosModules.home-manager {
+						home-manager.useGlobalPkgs = true;
+						home-manager.useUserPackages = true;
+						home-manager.backupFileExtension = "hm-backup";
+						home-manager.extraSpecialArgs = {
+							username = "nixos";
+						};
+						home-manager.users.nixos = {
+							imports = [ ./hosts/wsl/home.nix ];
+						};
+					}
+
+					nix-index-database.nixosModules.nix-index
+					{ programs.command-not-found.enable = false; }
+				];
+			};
 		};
 	};
 }

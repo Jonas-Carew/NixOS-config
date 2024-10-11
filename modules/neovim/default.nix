@@ -19,6 +19,9 @@
 			nvim-treesitter.withAllGrammars	# treesitter
 			galaxyline-nvim					# status line
 		];
+
+		viAlias = true;
+		vimAlias = true;
 		
 		extraConfig = ''
 			lua << EOF
