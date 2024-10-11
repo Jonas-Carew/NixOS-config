@@ -16,6 +16,7 @@
   wsl.enable = true;
   wsl.defaultUser = "nixos";
   
+  environment.interactiveShellInit = "fish";
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
