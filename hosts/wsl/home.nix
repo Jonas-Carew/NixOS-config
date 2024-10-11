@@ -3,7 +3,6 @@
 { inputs, pkgs, lib, username, ... }: {
 
 	imports = [
-/*
 		# neovim with config
 		(import ../../modules/neovim)
 
@@ -30,7 +29,6 @@
 
 		# wezterm with config
 		# (import ../../modules/wezterm)
-*/
 	];
 
 	# Home manager config

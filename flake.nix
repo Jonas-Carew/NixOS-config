@@ -13,6 +13,10 @@
 			url = "github:nix-community/nix-index-database";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
+		nixos-wsl = {
+			url = "github:nix-community/nixos-wsl";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
 	};
 
 	outputs = inputs:
@@ -75,7 +79,7 @@
 				inherit system;
 				modules = [
 					./hosts/wsl/configuration.nix
-
+					nixos-wsl.nixosModules.wsl
 					home-manager.nixosModules.home-manager {
 						home-manager.useGlobalPkgs = true;
 						home-manager.useUserPackages = true;
