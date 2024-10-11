@@ -18,6 +18,7 @@
 			vim-surround					# surround selections with pairs
 			nvim-treesitter.withAllGrammars	# treesitter
 			galaxyline-nvim					# status line
+			nvim-web-devicons				# mssing galaxyline icons
 		];
 
 		viAlias = true;
