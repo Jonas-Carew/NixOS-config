@@ -60,7 +60,7 @@
 			krita
 			onlyoffice-bin_latest
 			cloc
-			gparted
+			ncdu
 			/*
 			swaylock
 			swayidle
