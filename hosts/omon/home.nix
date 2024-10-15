@@ -61,6 +61,7 @@
 			onlyoffice-bin_latest
 			cloc
 			ncdu
+			marktext
 			/*
 			swaylock
 			swayidle
