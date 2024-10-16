@@ -53,7 +53,6 @@
 			soft-serve
 			glow
 			unzip
-			fsearch
 			ripgrep
 			flameshot
 			discord
