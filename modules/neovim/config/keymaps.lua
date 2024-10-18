@@ -24,7 +24,6 @@ keymap("n", "<leader>n", ":nohl<cr>", opts)
 keymap("n", "<leader>e", ":Neotree toggle<cr>", opts)
 
 -- Telescope commands
-keymap("n", "<leader>c", ":Telescope git_commits<cr>", opts)
 keymap("n", "<leader>g", ":Telescope live_grep<cr>", opts)
 
 -- Quick normal (change to using capslock)
