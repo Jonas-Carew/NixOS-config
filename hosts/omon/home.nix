@@ -27,6 +27,9 @@
 		# dev package for C
 		(import ../../modules/dev/C)
 
+		# dev package for C
+		(import ../../modules/dev/MarkDown)
+
 		# wezterm with config
 		# (import ../../modules/wezterm)
 	];
