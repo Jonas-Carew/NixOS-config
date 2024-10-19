@@ -27,7 +27,10 @@
 		# dev package for C
 		(import ../../modules/dev/C)
 
-		# dev package for C
+		# dev package for Markdown
+		(import ../../modules/dev/Markdown)
+
+		# dev package for Nix
 		(import ../../modules/dev/Markdown)
 
 		# wezterm with config
