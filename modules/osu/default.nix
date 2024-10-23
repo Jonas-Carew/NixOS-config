@@ -13,7 +13,7 @@
 			};
 			osutransfer = {
 				body = ''
-					scp $argv carewj@flip1.engr.oregonstate.edu:~/transfer
+					scp -r $argv carewj@flip1.engr.oregonstate.edu:~/transfer
 				'';
 			};
 			osuweb = {
