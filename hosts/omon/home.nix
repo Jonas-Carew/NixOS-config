@@ -117,7 +117,7 @@
 		fish = {
 			enable = true;
 			interactiveShellInit = ''
-				abbr --add nix-shell --command \"fish \&\& exit\; return\"
+				abbr --add nix-shell nix-shell --command \"fish \&\& exit\; return\"
 			'';
 			functions = {
 				x = {
