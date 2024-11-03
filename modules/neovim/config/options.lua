@@ -1,6 +1,7 @@
 local o = vim.opt
 
 vim.cmd("colorscheme adwaita")
+
 vim.cmd("command Tab2 %s/  /\t/g")
 
 o.number = true
