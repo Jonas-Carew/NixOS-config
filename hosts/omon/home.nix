@@ -67,6 +67,9 @@
 			cloc
 			ncdu
 			marktext
+
+			steam
+
 			/*
 			swaylock
 			swayidle
