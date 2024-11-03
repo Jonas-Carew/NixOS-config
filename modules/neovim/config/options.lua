@@ -9,6 +9,7 @@ o.relativenumber = true
 o.mouse = 'a'
 o.tabstop = 4
 o.shiftwidth = 4
+o.expandtab = false
 o.smartindent = true
 o.clipboard = 'unnamedplus'
 o.undofile = true
@@ -21,3 +22,10 @@ vim.opt.listchars = {
 	precedes = '⟨',
 	trail = '·'
 }
+
+vim.cmd[[
+augroup FileTypeSettings
+	autocmd!
+	autocmd FileType markdown setlocal noexpandtab
+augroup END
+]]
