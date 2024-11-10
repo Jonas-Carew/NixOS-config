@@ -67,6 +67,7 @@
 			cloc
 			ncdu
 			marktext
+			kdenlive
 
 			steam
 
