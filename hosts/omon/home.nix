@@ -68,6 +68,7 @@
 			ncdu
 			marktext
 			kdenlive
+			vlc
 
 			steam
 
