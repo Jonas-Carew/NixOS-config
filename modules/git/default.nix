@@ -20,11 +20,6 @@
 					git push
 				'';
 			};
-			gf = {
-				body = ''
-					git commit --amend
-				'';
-			};
 		};
 	};
 }
