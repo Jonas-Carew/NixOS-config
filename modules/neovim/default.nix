@@ -20,6 +20,7 @@
 			galaxyline-nvim					# status line
 			nvim-web-devicons				# mssing galaxyline icons
 			nvim-lspconfig
+			vimtex
 		];
 
 		viAlias = true;
