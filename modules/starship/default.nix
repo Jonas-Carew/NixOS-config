@@ -18,16 +18,40 @@
 				not_found_symbol = "not found";
 				sigint_symbol = "BREAK";
 			};
+			c = {
+				format = "with [$symbol($version(-$name) )]($style)";
+				symbol = "C ";
+			};
 			lua = {
+				format = "with [$symbol($version )]($style)";
 				symbol = " ";
 			};
 			nix_shell = {
-				format = "via [$symbol$state]($style) ";
-				symbol = "󱄅 ";
+				format = "with [$symbol$state( \($name\))]($style) ";
+				symbol = "󱄅~>";
 			};
 			zig = {
+				format = "with [$symbol($version )]($style)";
 				symbol = " ";
 			};
+			/*custom.nix = {
+				detect_extensions = ["nix"];
+				format = "with [$symbol]($style) ";
+				symbol = "󱄅 ";
+				style = "bold blue";
+			};
+			custom.tex = {
+				detect_extensions = ["tex"];
+				format = "with [$symbol]($style)";
+				symbol = " ";
+				style = "bold bright-white";
+			};
+			custom.md = {
+				detect_extensions = ["md"];
+				format = "with [$symbol]($style)";
+				symbol = " ";
+				style = "bold bright-white";
+			};*/
 		};
 	};
 }
