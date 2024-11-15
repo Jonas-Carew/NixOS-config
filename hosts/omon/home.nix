@@ -1,6 +1,14 @@
 # home.nix
 
-{ inputs, pkgs, lib, username, ... }: {
+{ inputs, pkgs, lib, username, ... }: 
+let
+
+	tex = (pkgs.texlive.combine {
+		inherit (pkgs.texlive) scheme-basic
+			latexmk; # for vimtex
+	});
+
+in {
 
 	imports = [
 		# neovim with config
@@ -69,6 +77,8 @@
 			marktext
 			kdenlive
 			vlc
+
+			tex
 
 			steam
 
