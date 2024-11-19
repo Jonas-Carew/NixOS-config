@@ -80,6 +80,8 @@ in {
 
 			tex
 
+			citrix_workspace
+
 			steam
 
 			/*
