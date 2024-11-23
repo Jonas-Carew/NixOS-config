@@ -69,7 +69,6 @@ in {
 			unzip
 			ripgrep
 			flameshot
-			discord
 			krita
 			onlyoffice-bin_latest
 			cloc
@@ -78,11 +77,8 @@ in {
 			kdenlive
 			vlc
 
-			tex
-
-			citrix_workspace
-
 			steam
+			discord
 
 			/*
 			swaylock
