@@ -26,6 +26,7 @@ vim.opt.listchars = {
 vim.cmd[[
 augroup FileTypeSettings
 	autocmd!
-	autocmd FileType markdown setlocal noexpandtab
+	autocmd BufEnter *.md setlocal noexpandtab
+	autocmd BufEnter *.md :Markview splitEnable
 augroup END
 ]]
