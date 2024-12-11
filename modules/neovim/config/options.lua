@@ -27,6 +27,5 @@ vim.cmd[[
 augroup FileTypeSettings
 	autocmd!
 	autocmd BufEnter *.md setlocal noexpandtab
-	autocmd BufEnter *.md :Markview splitEnable
 augroup END
 ]]
