@@ -25,6 +25,7 @@ keymap("n", "<leader>e", ":Neotree toggle<cr>", opts)
 
 -- Telescope commands
 keymap("n", "<leader>g", ":Telescope live_grep<cr>", opts)
+keymap("n", "<leader>f", ":Telescope find_files<cr>", opts)
 
 -- Quick normal (change to using capslock)
 keymap("i", "jk", "<ESC>", opts)
@@ -32,3 +33,6 @@ keymap("i", "jk", "<ESC>", opts)
 -- Hold onto shifts
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
+
+-- Ctrl + L in insert opens up brackets
+keymap("i", "<C-l>", "<ESC>ko", opts)

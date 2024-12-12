@@ -6,10 +6,10 @@ local gl = require("galaxyline")
 local gls = gl.section
 local condition = require("galaxyline.condition")
 
--- gl.short_line_list = { "NvimTree", "minimap" }
-
+-- Neovim stuff
 vim.api.nvim_command("hi GalaxyLineFillSection guibg=NONE")
 
+-- color definitions
 local colors = {
 	-- Dark
 	adw0 = "#1D1D1D", -- Black
@@ -42,7 +42,7 @@ gls.left[1] = {
 				i = "INSERT",
 				c = "COMMAND",
 				V = "VISUAL",
-				[""] = "VISUAL",
+			 [""] = "VISUAL",
 				v = "VISUAL",
 				R = "REPLACE",
 			}
@@ -229,13 +229,3 @@ gls.right[9] = {
 		highlight = { colors.adw2, colors.adw8 },
 	},
 }
---[[
-gls.right[9] = {
-	rightEnd = {
-		provider = function()
-			return ""
-		end,
-		highlight = { colors.adw8, colors.adw0 },
-	},
-}
---]]
