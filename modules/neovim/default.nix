@@ -29,7 +29,7 @@
 			neo-tree-nvim					# file tree
 			
 			vim-surround					# surround selections with pairs
-			
+
 			# alpha-nvim					# greeter
 		];
 		
@@ -39,7 +39,6 @@
 			${builtins.readFile ./config/keymaps.lua}
 			${builtins.readFile ./config/galaxyline-nvim.lua}
 			${builtins.readFile ./config/treesitter.lua}
-			${builtins.readFile ./config/nvim-lspconfig.lua}
 		'';
 	};
 }
