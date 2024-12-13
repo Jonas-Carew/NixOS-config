@@ -3,19 +3,25 @@
 	home.packages = with pkgs; [
 		
 		# nix
-		nil
-		# lua
-		lua-language-server
+		nixd
 		# C / C++
 		ccls
+		# markdown
+		marksman
+		# lua
+		lua-language-server
+
+		#html, css, json, eslint
+		# vscode-langservers-extracted
 
 	];
 
 	programs.neovim = {
 		
 		extraLuaConfig = ''
-			require('lspconfig').nil_ls.setup({})
+			require('lspconfig').nixd.setup({})
 			require('lspconfig').ccls.setup({})
+			require('lspconfig').marksman.setup({})
 			require('lspconfig').lua_ls.setup({
 				settings = {
 					Lua = {
@@ -29,13 +35,16 @@
 				},
 			})
 		'';
+			# require('lspconfig').html.setup({})
+			# require('lspconfig').cssls.setup({})
+			# require('lspconfig').eslint.setup({})
 
 		plugins = with pkgs.vimPlugins; [
 			# lsp config
 			nvim-lspconfig
 			# completion
-			nvim-cmp
-			cmp-nvim-lsp
+			# nvim-cmp
+			# cmp-nvim-lsp
 		];
 		
 	};
