@@ -38,13 +38,9 @@
 			# require('lspconfig').html.setup({})
 			# require('lspconfig').cssls.setup({})
 			# require('lspconfig').eslint.setup({})
-
 		plugins = with pkgs.vimPlugins; [
 			# lsp config
 			nvim-lspconfig
-			# completion
-			# nvim-cmp
-			# cmp-nvim-lsp
 		];
 		
 	};
