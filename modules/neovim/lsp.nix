@@ -2,14 +2,16 @@
 
 	home.packages = with pkgs; [
 		
-		# nix
+		# Nix
 		nixd
 		# C / C++
 		ccls
 		# markdown
 		marksman
-		# lua
+		# Lua
 		lua-language-server
+		# Zig
+		zls
 
 		#html, css, json, eslint
 		# vscode-langservers-extracted
@@ -22,6 +24,7 @@
 			require('lspconfig').nixd.setup({})
 			require('lspconfig').ccls.setup({})
 			require('lspconfig').marksman.setup({})
+			require('lspconfig').zls.setup({})
 			require('lspconfig').lua_ls.setup({
 				settings = {
 					Lua = {

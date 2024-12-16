@@ -1,5 +1,11 @@
 { pkgs, ... }: {
-	home.packages = with pkgs; [
-		zig_0_12
-	];
+	programs = {
+		fish.functions = {
+			zig_start = {
+				body = ''
+					nix shell 'github:mitchellh/zig-overlay#master'
+				'';
+			};
+		};
+	};
 }
