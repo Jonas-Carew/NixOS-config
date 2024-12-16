@@ -35,11 +35,8 @@ in {
 		# dev package for C
 		(import ../../modules/dev/C)
 
-		# dev package for Markdown
-		(import ../../modules/dev/Markdown)
-
-		# dev package for Nix
-		(import ../../modules/dev/Markdown)
+		# dev package for Zig
+		(import ../../modules/dev/Zig)
 
 		# wezterm with config
 		# (import ../../modules/wezterm)

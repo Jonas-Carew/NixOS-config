@@ -1,5 +1,5 @@
 { pkgs, ... }: {
 	home.packages = with pkgs; [
-		nil
+		zig_0_12
 	];
 }
