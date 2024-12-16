@@ -27,5 +27,6 @@ vim.cmd[[
 augroup FileTypeSettings
 	autocmd!
 	autocmd BufEnter *.md setlocal noexpandtab
+	autocmd BufEnter *.zig setlocal noexpandtab
 augroup END
 ]]
