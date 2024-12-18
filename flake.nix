@@ -17,17 +17,13 @@
 			url = "github:nix-community/nixos-wsl";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
+		zig.url = "github:mitchellh/zig-overlay#master";
 	};
 
 	outputs = inputs:
 	with inputs; let
 
 		system = "x86_64-linux";
-
-		pkgs = import nixpkgs{
-			inherit system;
-			config.allowUnfree = true;
-		};
 
 		lib = nixpkgs.lib;
 
