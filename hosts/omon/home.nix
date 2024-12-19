@@ -68,6 +68,7 @@ in {
 			gum
 			soft-serve
 			glow
+			vhs
 
 			# dependencies
 			# texmaker
