@@ -17,7 +17,7 @@
 			url = "github:nix-community/nixos-wsl";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
-		zig.url = "github:mitchellh/zig-overlay#master";
+		zig.url = "github:mitchellh/zig-overlay";
 	};
 
 	outputs = inputs:
