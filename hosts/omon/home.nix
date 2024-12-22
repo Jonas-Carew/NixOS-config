@@ -17,8 +17,8 @@ in {
 		# tmux with config
 		(import ../../modules/tmux)
 
-		# use FiraCode nerdfont w/ symbols
-		(import ../../modules/firacode)
+		# import all fonts
+		(import ../../modules/fonts)
 
 		# use cowsay and fortune for a 'say' command
 		(import ../../modules/say-fortune)
@@ -113,6 +113,11 @@ in {
 		eza = { enable = true; };
 		zoxide = { enable = true; };
 		fzf = { enable = true; };
+
+		# wezterm (WIP)
+		/*wezterm = {
+			enable = true;
+		};*/
 
 		# fish
 		fish = {

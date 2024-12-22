@@ -1,6 +1,6 @@
 { pkgs, ... }: {
 	home.packages = with pkgs; [
 		fira-code
-		nerdfonts
+		nerd-fonts.fira-code
 	];
 }
