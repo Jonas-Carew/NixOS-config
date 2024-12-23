@@ -80,6 +80,7 @@ in {
 			cloc
 			ncdu
 			bottom
+			yazi
 
 			# general desktop utilities
 			flameshot
@@ -115,9 +116,21 @@ in {
 		fzf = { enable = true; };
 
 		# wezterm (WIP)
-		/*wezterm = {
+		/*
+		wezterm = {
 			enable = true;
-		};*/
+			package = pkgs.wezterm-nightly;
+			extraConfig = ''
+				local wezterm = require 'wezterm'
+				local config = wezterm.config_builder()
+				
+				config.front_end = "WebGpu"
+				enable_wayland = false
+
+				return config
+			'';
+		};
+		*/
 
 		# fish
 		fish = {
