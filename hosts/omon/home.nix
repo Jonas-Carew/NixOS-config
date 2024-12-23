@@ -80,7 +80,6 @@ in {
 			cloc
 			ncdu
 			bottom
-			yazi
 
 			# general desktop utilities
 			flameshot
