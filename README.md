@@ -1,5 +1,13 @@
 # My personal NixOS config that runs on all my computers and virtual machines
 
+## Features
+
+This flake has many features and bindings, many of which are documented on the wiki for my WSL-Nix-Basis repository
+
+I plan to document all features and tweaks of this full flake on a wiki here, but I haven't done it yet.
+
+## Making a new host
+
 To make a new host one must follow these steps:
 
 - Add a new host directory with the new host's `configuration.nix` and `hardware-configuration.nix` files.
