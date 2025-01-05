@@ -95,7 +95,7 @@ in {
 
 			# desktop programs for fun
 			steam
-			discord
+			discord-canary
 		];
 	};
 
