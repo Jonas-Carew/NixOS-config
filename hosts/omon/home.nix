@@ -38,6 +38,9 @@ in {
 		# dev package for Zig
 		(import ../../modules/dev/Zig)
 
+		# dev package for Python
+		(import ../../modules/dev/Python)
+
 		# wezterm with config
 		# (import ../../modules/wezterm)
 	];
