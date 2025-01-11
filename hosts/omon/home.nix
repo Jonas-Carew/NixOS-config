@@ -38,8 +38,8 @@ in {
 		# dev package for Zig
 		(import ../../modules/dev/Zig)
 
-		# dev package for Python
-		(import ../../modules/dev/Python)
+		# pkgs for python for MTH 499
+		(import ../../modules/osu/MTH499-Math_of_Data_Science)
 
 		# wezterm with config
 		# (import ../../modules/wezterm)
@@ -87,7 +87,7 @@ in {
 			# general desktop utilities
 			flameshot
 			kdePackages.kolourpaint
-			avrdude
+			# avrdude # ECE 375 - another program is windows only
 
 			# larger desktop programs
 			krita
