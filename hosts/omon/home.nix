@@ -87,6 +87,7 @@ in {
 			# general desktop utilities
 			flameshot
 			kdePackages.kolourpaint
+			avrdude
 
 			# larger desktop programs
 			krita
