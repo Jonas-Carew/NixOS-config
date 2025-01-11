@@ -30,6 +30,7 @@ in {
 		(import ../../modules/git)
 
 		# pkgs for accessing osu servers
+		# and for all classes
 		(import ../../modules/osu)
 
 		# dev package for C
@@ -37,9 +38,6 @@ in {
 
 		# dev package for Zig
 		(import ../../modules/dev/Zig)
-
-		# pkgs for python for MTH 499
-		(import ../../modules/osu/MTH499-Math_of_Data_Science)
 
 		# wezterm with config
 		# (import ../../modules/wezterm)

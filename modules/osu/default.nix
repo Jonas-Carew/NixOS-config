@@ -1,7 +1,7 @@
 { pkgs, ... }: {
 
 	imports = [
-		(import ./cs290)
+		(import ./MTH499-Math_of_Data_Science)
 	];
 
 	programs = {
