@@ -12,8 +12,10 @@
 		lua-language-server
 		# Zig
 		zls
+		# Python
+		pylyzer
 
-		#html, css, json, eslint
+		# html, css, json, eslint
 		# vscode-langservers-extracted
 
 	];
@@ -25,6 +27,7 @@
 			require('lspconfig').ccls.setup({})
 			require('lspconfig').marksman.setup({})
 			require('lspconfig').zls.setup({})
+			require('lspconfig').pylyzer.setup({})
 			require('lspconfig').lua_ls.setup({
 				settings = {
 					Lua = {
@@ -37,7 +40,6 @@
 					},
 				},
 			})
-			require('lspconfig').pylyzer.setup({})
 		'';
 			# require('lspconfig').html.setup({})
 			# require('lspconfig').cssls.setup({})
