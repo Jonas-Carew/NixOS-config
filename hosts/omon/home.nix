@@ -36,6 +36,9 @@ in {
 		# dev package for Zig
 		(import ../../modules/dev/Zig)
 
+		# dev package for Python
+		(import ../../modules/dev/Python)
+
 		# manim math animations
 		(import ../../modules/manim)
 
