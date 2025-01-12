@@ -33,11 +33,11 @@ in {
 		# and for all classes
 		(import ../../modules/osu)
 
-		# dev package for C
-		(import ../../modules/dev/C)
-
 		# dev package for Zig
 		(import ../../modules/dev/Zig)
+
+		# manim math animations
+		(import ../../modules/manim)
 
 		# wezterm with config
 		# (import ../../modules/wezterm)
