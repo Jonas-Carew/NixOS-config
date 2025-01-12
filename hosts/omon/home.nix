@@ -39,9 +39,6 @@ in {
 		# dev package for Python
 		(import ../../modules/dev/Python)
 
-		# manim math animations
-		(import ../../modules/manim)
-
 		# wezterm with config
 		# (import ../../modules/wezterm)
 	];
