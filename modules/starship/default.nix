@@ -34,24 +34,10 @@
 				format = "with [$symbol($version )]($style)";
 				symbol = " ";
 			};
-			/*custom.nix = {
-				detect_extensions = ["nix"];
-				format = "with [$symbol]($style) ";
-				symbol = "󱄅 ";
-				style = "bold blue";
+			python = {
+				format = "with [$symbol$pyenv_prefix($version )(\($virtualenv\) )]($style)";
+				symbol = " ";
 			};
-			custom.tex = {
-				detect_extensions = ["tex"];
-				format = "with [$symbol]($style)";
-				symbol = " ";
-				style = "bold bright-white";
-			};
-			custom.md = {
-				detect_extensions = ["md"];
-				format = "with [$symbol]($style)";
-				symbol = " ";
-				style = "bold bright-white";
-			};*/
 		};
 	};
 }
