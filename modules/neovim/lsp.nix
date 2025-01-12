@@ -37,6 +37,7 @@
 					},
 				},
 			})
+			require('lspconfig').pylyzer.setup({})
 		'';
 			# require('lspconfig').html.setup({})
 			# require('lspconfig').cssls.setup({})
