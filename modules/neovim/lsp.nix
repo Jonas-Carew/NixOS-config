@@ -13,7 +13,7 @@
 		# Zig
 		zls
 		# Python
-		pylyzer
+		# installed in dev/Python module
 
 		# html, css, json, eslint
 		# vscode-langservers-extracted
@@ -27,7 +27,7 @@
 			require('lspconfig').ccls.setup({})
 			require('lspconfig').marksman.setup({})
 			require('lspconfig').zls.setup({})
-			require('lspconfig').pylyzer.setup({})
+			require('lspconfig').pylsp.setup({})
 			require('lspconfig').lua_ls.setup({
 				settings = {
 					Lua = {
