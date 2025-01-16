@@ -10,7 +10,7 @@
 		(import ../../modules/tmux)
 
 		# use FiraCode nerdfont w/ symbols
-		(import ../../modules/firacode)
+		(import ../../modules/fonts)
 
 		# use cowsay and fortune for a 'say' command
 		(import ../../modules/say-fortune)
@@ -26,9 +26,6 @@
 
 		# dev package for C
 		(import ../../modules/dev/C)
-
-		# wezterm with config
-		# (import ../../modules/wezterm)
 	];
 
 	# Home manager config
@@ -72,8 +69,6 @@
 		zoxide = { enable = true; };
 
 		fzf = { enable = true; };
-
-		#jq = { enable = true; };
 
 		fish = {
 			enable = true;
