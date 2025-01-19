@@ -85,7 +85,6 @@ in {
 			# general desktop utilities
 			flameshot
 			kdePackages.kolourpaint
-			# avrdude # ECE 375 - another program is windows only
 
 			# larger desktop programs
 			krita
@@ -94,6 +93,7 @@ in {
 			kdenlive
 			vlc
 			texmaker
+			octave
 
 			# desktop programs for fun
 			steam
