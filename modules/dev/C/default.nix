@@ -4,5 +4,8 @@
 		gnumake
 		valgrind
 		gdb
+
+		# dev for nuklear
+		glew
 	];
 }
