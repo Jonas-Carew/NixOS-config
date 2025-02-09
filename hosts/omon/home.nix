@@ -33,6 +33,9 @@ in {
 		# and for all classes
 		(import ../../modules/osu)
 
+		# dev package for C
+		(import ../../modules/dev/C)
+
 		# dev package for Zig
 		(import ../../modules/dev/Zig)
 
@@ -66,38 +69,39 @@ in {
 
 		packages = with pkgs; [
 			# charm packages
-			gum
-			soft-serve
-			glow
-			vhs
+			gum # stick things together - used in fetch
+			soft-serve # manage git repos
+			glow # read markdown
+			vhs # cli gifs
 
 			# dependencies
 			# texmaker
-			tex
+			tex # tex library
 
 			# general CLI utilities
-			unzip
-			ripgrep
-			cloc
-			ncdu
-			bottom
+			unzip # unzip things
+			ripgrep # grep!
+			cloc # count lines of code
+			ncdu # file size viewer
+			bottom # task manager
 
 			# general desktop utilities
-			flameshot
-			kdePackages.kolourpaint
+			flameshot # screenshot tool
+			kdePackages.kolourpaint # paint replacement
+			gv # views eps files
 
 			# larger desktop programs
-			krita
-			onlyoffice-bin_latest
-			marktext
-			kdenlive
-			vlc
-			texmaker
-			octave
+			krita # larger drawing program
+			onlyoffice-bin_latest # office replacement
+			marktext # markdown editor
+			kdenlive # video editor
+			vlc # video viewer
+			texmaker # tex editor
+			octave # better than matlab
 
 			# desktop programs for fun
-			steam
-			discord-canary
+			steam # steam
+			discord-canary # discord nightly so streaming works on wayland
 		];
 	};
 

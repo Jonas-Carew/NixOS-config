@@ -11,6 +11,7 @@
 			torch
 			torchvision
 			torchaudio
+			scikit-learn
 
 			# Manim
 			manim
