@@ -15,6 +15,8 @@
 	hardware.graphics.enable32Bit = true;
 	hardware.pulseaudio.support32Bit = true;
 
+	# hardware.opengl.enable = true;
+
 	# Bootloader.
 	boot.loader.systemd-boot.enable = true;
 	boot.loader.efi.canTouchEfiVariables = true;
