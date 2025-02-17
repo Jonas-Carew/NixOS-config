@@ -88,7 +88,6 @@ in {
 			# general desktop utilities
 			flameshot # screenshot tool
 			kdePackages.kolourpaint # paint replacement
-			gv # views eps files
 
 			# larger desktop programs
 			krita # larger drawing program
