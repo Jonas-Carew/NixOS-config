@@ -115,9 +115,12 @@ in {
 		home-manager = { enable = true; };
 
 		# general CLI utilities
-		eza = { enable = true; };
 		zoxide = { enable = true; };
 		fzf = { enable = true; };
+		eza = {
+			enable = true;
+			icons = true;
+		};
 
 		# wezterm (WIP)
 		/*
