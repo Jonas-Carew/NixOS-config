@@ -13,7 +13,7 @@
 	nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
 	hardware.graphics.enable32Bit = true;
-	hardware.pulseaudio.support32Bit = true;
+	services.pulseaudio.support32Bit = true;
 
 	# hardware.opengl.enable = true;
 

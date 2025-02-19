@@ -119,7 +119,7 @@ in {
 		fzf = { enable = true; };
 		eza = {
 			enable = true;
-			icons = true;
+			icons = "auto";
 		};
 
 		# wezterm (WIP)
