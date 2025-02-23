@@ -97,6 +97,7 @@ in {
 			vlc # video viewer
 			texmaker # tex editor
 			octave # better than matlab
+			heroic # game launcher
 
 			# desktop programs for fun
 			steam # steam
